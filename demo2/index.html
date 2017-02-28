@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>圣杯布局</title>
+    <style>
+        .HolyGrail {
+          display: flex;
+          min-height: 100vh;
+          flex-direction: column;
+        }
+
+        header,
+        footer {
+          flex: 1;
+        }
+
+        .HolyGrail-body {
+          display: flex;
+          flex: 2;
+        }
+
+        .HolyGrail-content {
+          flex: 1;
+        }
+
+        .HolyGrail-nav, .HolyGrail-ads {
+          /* 两个边栏的宽度设为12em */
+          flex: 0 0 12em;
+        }
+
+        .HolyGrail-nav {
+          /* 导航放到最左边 */
+          order: -1;
+        }
+        header,footer{
+            background: #666666;
+        }
+        .HolyGrail-nav{
+            background: #77BBDD;
+        }
+        .HolyGrail-content{
+            background:#D6D6D6;
+        }
+        .HolyGrail-ads{
+            background: #FA6432;
+        }
+    </style>
+</head>
+<body>
+    <body class="HolyGrail">
+      <header>this is header</header>
+      <div class="HolyGrail-body">
+        <main class="HolyGrail-content">this is content</main>
+        <nav class="HolyGrail-nav">this is nav</nav>
+        <aside class="HolyGrail-ads">this is ads</aside>
+      </div>
+      <footer>this is footer</footer>
+    </body>
+</body>
+</html>
