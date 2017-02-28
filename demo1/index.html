@@ -13,8 +13,9 @@
         .wrap{
             display: flex;
             flex:0 0 100%;
-            margin:50px 0 0 50px;
+            margin:50px 0 0px 50px;
             justify-content: space-around;
+            flex-flow:row wrap;
         }
         .box{
             display: flex;
@@ -23,6 +24,7 @@
             padding:20px;
             border-radius: 5px;
             background: #fff;
+            margin-bottom: 50px;
         }
         .circle{
             border:10px solid black;
@@ -30,6 +32,12 @@
             border-radius: 50%;
         }
         /*private*/
+        /*1点*/
+        .box1{
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+        }
         /*2点*/
         .box2{
             flex-flow: column wrap;
@@ -86,7 +94,7 @@
 <body>
     <div class="wrap">
         <!-- 1点 -->
-        <div class="box">
+        <div class="box box1">
             <div class="item">
                 <div class="circle"></div>
             </div>
